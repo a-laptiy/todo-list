@@ -1,0 +1,121 @@
+.button {
+  border: 2px solid #30324b;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: transparent;
+  box-shadow: none;
+  transition: .3s;
+
+  &:active,
+  &.active {
+    background: #30324b;
+    color: #ffffff;
+  }
+
+  &:hover {
+    background: #575a84;
+    color: #ffffff;
+  }
+
+  &:focus-visible {
+    background: #30324b;
+    border-color: #a4a4a4;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background: #f2f3f5;
+    color: #dedede;
+  }
+
+  &--secondary {
+    border-color: #6ad400;
+    color: #6ad400;
+
+    &:active,
+    &.active {
+      background: #6ad400;;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: #ceff9d;
+      color: #6ad400;
+    }
+
+    &:focus-visible {
+      background: #6ad400;
+      border-color: #ceff9d;
+      color: #ffffff;
+    }
+  }
+
+  &--error {
+    border-color: #ff2f2f;
+    color: #ff2f2f;
+
+    &:active,
+    &.active {
+      background: #ff2f2f;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: #ffb8b8;
+      color: #ff2f2f;
+    }
+
+    &:focus-visible {
+      background: #ff2f2f;
+      border-color: #ffb8b8;
+      color: #ffffff;
+    }
+  }
+
+  &__icon {
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    &--delete {
+      color: #ff2f2f;
+
+      &:hover {
+        color: #ff9b9b;
+      }
+
+      &:focus {
+        background: #a4a4a4;
+      }
+
+      &:disabled {
+        color: #a4a4a4;
+      }
+    }
+
+    &--edit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      color: #30324B;
+
+      &:active,
+      &.active {
+        color: #0013FF;
+      }
+
+      &:hover {
+        color: #606492;
+      }
+
+      &:focus {
+        background: #a4a4a4;
+      }
+
+      &:disabled {
+        color: #a4a4a4;
+      }
+    }
+  }
+}

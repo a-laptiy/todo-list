@@ -1,0 +1,15 @@
+.todo-main {
+  max-width: 1272px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px 16px;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 56px;
+  }
+}

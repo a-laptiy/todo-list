@@ -1,0 +1,54 @@
+.task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -20px;
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 21px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__item-top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: 2px solid #a4a4a4;
+    background: transparent;
+    transition: .3s;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &--active {
+      background: #6ad400;
+      border-color: #6ad400;
+    }
+  }
+
+  &__item-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #30324b;
+    word-break: break-word;
+
+    &--completed {
+      text-decoration: line-through;
+    }
+  }
+}

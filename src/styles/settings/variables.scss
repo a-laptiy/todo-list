@@ -1,0 +1,50 @@
+@import 'colors.scss';
+
+/* Fonts */
+$f-sans-serif: 'Roboto', sans-serif;
+$f-helvetica: 'Helvetica Neue', sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+/* Base variables */
+$main-font: $f-sans-serif;
+$main-font-size: 18px;
+$main-line-height: 1.22;
+$main-text-color: #000000;
+$link-color: #000000;
+
+$default-transition-time: 0.3s;
+$default-transition: all $default-transition-time ease;
+
+/* media queries */
+$big-phone-up: 'screen and (min-width: 400px)';
+$tablet-portrait-up: 'screen and (min-width: 600px)';
+$tablet-landscape-up: 'screen and (min-width: 900px)';
+$laptop-up: 'screen and (min-width: 1200px)';
+$desktop-up: 'screen and (min-width: 1600px)';
+
+$big-phone-down: 'screen and (max-width: 399px)';
+$tablet-portrait-down: 'screen and (max-width: 599px)';
+$tablet-landscape-down: 'screen and (max-width: 899px)';
+$laptop-down: 'screen and (max-width: 1199px)';
+$desktop-down: 'screen and (max-width: 1599px)';
+
+// space
+$space-8: 8px;
+$space-10: 10px;
+$space-12: 12px;
+$space-16: 16px;
+$space-20: 20px;
+$space-24: 24px;
+$space-32: 32px;
+$space-40: 40px;
+$space-48: 48px;
+$space-56: 56px;
+$space-60: 60px;
+$space-64: 64px;
+$space-72: 72px;
+$space-80: 80px;
+$space-100: 100px;

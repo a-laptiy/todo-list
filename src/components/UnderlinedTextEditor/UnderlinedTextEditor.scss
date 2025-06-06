@@ -1,0 +1,42 @@
+.underlined-editor {
+  font-weight: 400;
+  font-size: 16px;
+  color: #30324b;
+  cursor: text;
+}
+
+.underlined-block {
+  position: relative;
+  margin-bottom: 6px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.50px solid #878787;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.public-DraftEditor-content {
+  caret-color: #0013ff;
+}
+
+.public-DraftEditor-content span {
+  position: relative;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.public-DraftEditorPlaceholder-root {
+  color: #999999;
+}

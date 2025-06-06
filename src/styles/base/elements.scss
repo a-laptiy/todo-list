@@ -1,0 +1,151 @@
+/* ==========================================================================
+  Base styles
+========================================================================== */
+
+@import '../settings/variables.scss';
+
+/* stylelint-disable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+  font-weight: 400;
+  word-wrap: break-word;
+  color: $main-text-color;
+  overflow-wrap: break-word;
+  letter-spacing: -0.72px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+object,
+input,
+textarea {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  image-rendering: -moz-crisp-edges; /* Firefox                        */
+  image-rendering: -o-crisp-edges; /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: crisp-edges;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min--moz-device-pixel-ratio: 1.25),
+    only screen and (-o-min-device-pixel-ratio: 1.25/1),
+    only screen and (min-device-pixel-ratio: 1.25),
+    only screen and (min-resolution: 200dpi),
+    only screen and (min-resolution: 1.25dppx) {
+    image-rendering: auto;
+  }
+}
+
+@-moz-document url-prefix() {
+  img {
+    image-rendering: optimizeQuality;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+.text-underline {
+  text-decoration: underline;
+  text-decoration-color: #000000;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 30px;
+
+  &--column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main,
+.aside {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      position: relative;
+      padding: 0 0 0 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 0;
+        top: 11px;
+        border-radius: 50%;
+        background-color: #000000;
+      }
+    }
+  }
+
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    counter-reset: custom-counter;
+
+    & > li {
+      position: relative;
+      padding: 0 0 0 20px;
+      counter-increment: custom-counter;
+
+      &:nth-child(n + 10) {
+        padding-left: 26px;
+      }
+
+      &::before {
+        content: counter(custom-counter) '.';
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
