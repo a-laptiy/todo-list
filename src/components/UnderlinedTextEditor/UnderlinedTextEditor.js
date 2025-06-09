@@ -64,9 +64,8 @@ const UnderlinedTextEditor = ({ initialText = '', onChange }) => {
     },
   };
 
-  const blockStyleFn = (contentBlock) => {
-    const type = contentBlock.getType();
-    return type === 'underlined' ? 'underlined-block' : '';
+  const blockStyleFn = () => {
+    return 'underlined-block';
   };
 
   return (
